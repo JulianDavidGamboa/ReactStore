@@ -7,7 +7,7 @@ export default class Navbar extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-expand-sm bg-dark navbar-dark px-sm-5">
+        <NavGrapper className="navbar navbar-expand-sm navbar-dark px-sm-5">
           {/* https://www.iconfinder.com/icons/1243689/call_phone_icon
           Creative Commons (Attribution 3.0 Unported);
           https://www.iconfinder.com/Makoto_msk */}
@@ -29,8 +29,18 @@ export default class Navbar extends Component {
               my cart
             </ButtonContainer>
           </Link>
-        </nav>
+        </NavGrapper>
       </div>
     );
   }
 }
+
+const NavGrapper = styled.nav`
+  background: var(--mainDark);
+  .nav-link{
+    color: var(--mainWhite)!important;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+
+  }
+`;
